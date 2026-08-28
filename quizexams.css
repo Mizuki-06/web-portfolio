@@ -86,7 +86,6 @@ body {
     animation: fadeDown 1s ease forwards;
 }
 
-/* FRONT AND BACK CONTAINER */
 .quiz-images {
     width: 100%;
     display: flex !important;
@@ -96,29 +95,26 @@ body {
     gap: 30px !important;
 }
 
-/* EACH IMAGE SECTION */
 .quiz-side {
     width: 300px !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     animation: slideUp 0.8s ease forwards;
+    animation-fill-mode: backwards;
 }
 
-/* FRONT AND BACK TEXT */
 .quiz-side h4 {
     color: white;
     font-size: 24px;
     margin-bottom: 15px;
 }
 
-/* CLICKABLE IMAGE */
 .quiz-side a {
     display: block;
     width: 100%;
 }
 
-/* IMAGE */
 .quiz-side a img {
     display: block !important;
     width: 300px !important;
