@@ -27,7 +27,7 @@ body {
     justify-content: space-between;
     padding: 15px;
     z-index: 1000;
-    animation: typing 2s ease;
+    animation: typing 2s;
 }
 
 .logo {
@@ -61,97 +61,78 @@ body {
     color: #193f70;
 }
 
+/* Quiz Section */
 #quizexamsection {
-    padding-top: 80px;
+    padding-top: 100px;
 }
 
-/* Quiz and Exam Cards */
 .cards {
+    width: 100%;
     display: flex;
     justify-content: center;
-    padding: 30px;
+    padding: 30px 20px;
 }
 
 .quizexamcard {
     width: 100%;
-    max-width: 1000px;
-    padding: 25px;
-    border-radius: 15px;
+    max-width: 900px;
     text-align: center;
-    opacity: 0;
-    animation: fadeDown 1s ease-out forwards;
 }
 
 .quizexamcard h3 {
-    margin-top: 20px;
-    margin-bottom: 30px;
     color: white;
     font-size: 30px;
-    opacity: 0;
-    animation: fadeDown 1s ease forwards;
+    margin-bottom: 30px;
 }
 
+/* FRONT AND BACK CONTAINER */
 .quiz-images {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 30px;
+    width: 100%;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    gap: 30px !important;
 }
 
+/* EACH IMAGE SECTION */
 .quiz-side {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 250px;
-    opacity: 0;
-    animation: slideUp 0.8s ease forwards;
+    width: 300px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
 }
 
+/* FRONT AND BACK TEXT */
 .quiz-side h4 {
-    margin-bottom: 15px;
     color: white;
     font-size: 24px;
-    animation: fadeIn 1s ease forwards;
+    margin-bottom: 15px;
 }
 
+/* CLICKABLE IMAGE */
 .quiz-side a {
     display: block;
+    width: 100%;
 }
 
-.quiz-side img {
-    width: 250px;
-    height: 400px;
-    object-fit: cover;
+/* IMAGE */
+.quiz-side a img {
+    display: block !important;
+    width: 300px !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
     border-radius: 10px;
     cursor: pointer;
-
-    transition: 
-        transform 0.4s ease,
-        box-shadow 0.4s ease;
+    transition: transform 0.3s ease;
 }
 
-.quiz-side img:hover {
-    transform: scale(1.05) translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+.quiz-side a img:hover {
+    transform: scale(1.03);
 }
 
-.quiz-side:nth-child(1) {
-    animation-delay: 0.5s;
-}
-
-.quiz-side:nth-child(2) {
-    animation-delay: 1s;
-}
-
-@media (max-width: 650px) {
-    .quiz-images {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-/*Animation*/
+/* Animation */
 @keyframes typing {
     from {
         width: 0;
@@ -159,39 +140,5 @@ body {
 
     to {
         width: 100%;
-    }
-}
-
-@keyframes fadeDown {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
     }
 }
