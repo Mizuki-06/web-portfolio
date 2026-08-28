@@ -83,7 +83,6 @@ body {
     color: white;
     font-size: 30px;
     margin-bottom: 30px;
-    opacity: 0;
     animation: fadeDown 1s ease forwards;
 }
 
@@ -103,7 +102,6 @@ body {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    opacity: 0;
     animation: slideUp 0.8s ease forwards;
 }
 
