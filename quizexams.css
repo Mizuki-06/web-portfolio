@@ -74,6 +74,7 @@ body {
     padding: 25px;
     border-radius: 15px;
     text-align: center;
+    animation: fadeDown 1s ease forwards;
 }
 
 .quizexamcard h3 {
@@ -81,6 +82,7 @@ body {
     margin-bottom: 30px;
     color: white;
     font-size: 30px;
+    animation: fadeDown 1s ease forwards;
 }
 
 .quiz-images {
@@ -96,12 +98,15 @@ body {
     flex-direction: column;
     align-items: center;
     width: 250px;
+    opacity: 0;
+    animation: slideUp 0.8s ease forwards;
 }
 
 .quiz-side h4 {
     margin-bottom: 15px;
     color: white;
     font-size: 24px;
+    animation: fadeIn 1s ease forwards;
 }
 
 .quiz-side a {
@@ -114,11 +119,23 @@ body {
     object-fit: cover;
     border-radius: 10px;
     cursor: pointer;
-    transition: transform 0.3s ease;
+
+    transition: 
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
 }
 
 .quiz-side img:hover {
-    transform: scale(1.03);
+    transform: scale(1.05) translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.quiz-side:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.quiz-side:nth-child(2) {
+    animation-delay: 0.6s;
 }
 
 @media (max-width: 650px) {
@@ -128,14 +145,37 @@ body {
     }
 }
 
-/* Animation */
-@keyframes typing {
+/*Animation*/
+@keyframes fadeDown {
     from {
-        width: 0;
+        opacity: 0;
+        transform: translateY(-30px);
     }
 
     to {
-        width: 100%;
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
