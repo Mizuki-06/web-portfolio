@@ -27,7 +27,7 @@ body {
     justify-content: space-between;
     padding: 15px;
     z-index: 1000;
-    animation: typing 2s;
+    animation: typing 2s ease;
 }
 
 .logo {
