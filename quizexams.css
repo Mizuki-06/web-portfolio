@@ -83,25 +83,31 @@ body {
     color: white;
     font-size: 30px;
     margin-bottom: 30px;
-    animation: fadeDown 1s ease forwards;
+
+    animation: fadeDown 1s ease;
 }
 
 .quiz-images {
     width: 100%;
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: center !important;
-    align-items: flex-start !important;
-    gap: 30px !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
 }
 
 .quiz-side {
-    width: 300px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    animation: slideUp 0.8s ease forwards;
-    animation-fill-mode: backwards;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    animation: slideUp 0.8s ease;
+}
+
+/* Delay the Back image only */
+.quiz-side:nth-child(2) {
+    animation-delay: 0.4s;
 }
 
 .quiz-side h4 {
@@ -116,13 +122,13 @@ body {
 }
 
 .quiz-side a img {
-    display: block !important;
-    width: 300px !important;
-    max-width: 100% !important;
-    height: auto !important;
-    object-fit: contain !important;
+    display: block;
+    width: 300px;
+    max-width: 100%;
+    height: auto;
     border-radius: 10px;
     cursor: pointer;
+
     transition: transform 0.3s ease;
 }
 
@@ -152,6 +158,7 @@ body {
         transform: translateY(0);
     }
 }
+
 @keyframes slideUp {
     from {
         opacity: 0;
