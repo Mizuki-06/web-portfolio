@@ -61,6 +61,73 @@ body {
     color: #193f70;
 }
 
+/* Quiz and Exam Cards */
+.cards {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.quizexamcard {
+    width: 100%;
+    max-width: 1000px;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.quizexamcard h3 {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: white;
+    font-size: 30px;
+}
+
+.quiz-images {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.quiz-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+}
+
+.quiz-side h4 {
+    margin-bottom: 15px;
+    color: white;
+    font-size: 24px;
+}
+
+.quiz-side a {
+    display: block;
+}
+
+.quiz-side img {
+    width: 250px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.quiz-side img:hover {
+    transform: scale(1.03);
+}
+
+@media (max-width: 650px) {
+    .quiz-images {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 /* Animation */
 @keyframes typing {
     from {
