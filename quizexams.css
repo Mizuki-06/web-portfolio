@@ -27,7 +27,7 @@ body {
     justify-content: space-between;
     padding: 15px;
     z-index: 1000;
-    animation: typing 2s ease;
+    animation: navSlideDown 1s ease-out;
 }
 
 .logo {
@@ -61,6 +61,10 @@ body {
     color: #193f70;
 }
 
+#quizexamsection {
+    padding-top: 80px;
+}
+
 /* Quiz and Exam Cards */
 .cards {
     display: flex;
@@ -74,15 +78,18 @@ body {
     padding: 25px;
     border-radius: 15px;
     text-align: center;
-    animation: fadeDown 1s ease forwards;
+    opacity: 0;
+    animation: fadeDown 1s ease-out forwards;
 }
 
 .quizexamcard h3 {
     margin-top: 20px;
     margin-bottom: 30px;
     color: white;
-    font-size: 30px;
-    animation: fadeDown 1s ease forwards;
+    font-size: 30px;    
+    opacity: 0;
+    animation: fadeDown 0.8s ease-out forwards;
+    animation-delay: 0.5s;
 }
 
 .quiz-images {
@@ -99,7 +106,7 @@ body {
     align-items: center;
     width: 250px;
     opacity: 0;
-    animation: slideUp 0.8s ease forwards;
+    animation: slideUp 1s ease-out forwards;
 }
 
 .quiz-side h4 {
@@ -146,13 +153,15 @@ body {
 }
 
 /*Animation*/
-@keyframes typing {
+@keyframes navSlideDown {
     from {
-        width: 0;
+        opacity: 0;
+        transform: translateY(-100%);
     }
 
     to {
-        width: 100%;
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
