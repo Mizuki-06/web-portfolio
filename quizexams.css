@@ -4,16 +4,15 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
-    scroll-behavior: smooth;
 }
 
-/* Background */
 body {
-    background-image: url(images/bg.png);
+    background-image: url("./images/bg.png");
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
+    min-height: 100vh;
 }
 
 /* Navigation */
@@ -27,12 +26,9 @@ body {
     justify-content: space-between;
     padding: 15px;
     z-index: 1000;
-    animation: typing 2s;
 }
 
 .logo {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
-        'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 24px;
     font-weight: bold;
     color: white;
@@ -53,100 +49,76 @@ body {
     color: white;
     text-decoration: none;
     font-size: 18px;
-    transition: color 0.8s;
 }
 
-.nav-links a:hover,
-.logo:hover {
-    color: #193f70;
+/* Quiz Section */
+#quizexamsection {
+    padding-top: 100px;
 }
 
-/* Quiz and Exam Cards */
 .cards {
+    width: 100%;
     display: flex;
     justify-content: center;
-    padding: 100px 20px 30px;
-    width: 100%;
+    padding: 30px 20px;
 }
 
 .quizexamcard {
     width: 100%;
     max-width: 900px;
-    padding: 25px;
-    border-radius: 15px;
     text-align: center;
 }
 
 .quizexamcard h3 {
-    margin-bottom: 30px;
     color: white;
     font-size: 30px;
+    margin-bottom: 30px;
 }
+
 
 .quiz-images {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 30px;
     width: 100%;
-    flex-wrap: wrap;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    gap: 30px !important;
 }
+
 
 .quiz-side {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 0 1 350px;
+    width: 300px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
 }
 
+
 .quiz-side h4 {
-    margin-bottom: 15px;
     color: white;
     font-size: 24px;
+    margin-bottom: 15px;
 }
+
 
 .quiz-side a {
     display: block;
     width: 100%;
 }
 
-.quiz-side img {
-    width: 100%;
-    height: auto;
-    max-width: 350px;
+
+.quiz-side a img {
+    display: block !important;
+    width: 300px !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
     border-radius: 10px;
     cursor: pointer;
     transition: transform 0.3s ease;
-    display: block;
 }
 
-.quiz-side img:hover {
+.quiz-side a img:hover {
     transform: scale(1.03);
 }
 
-@media (max-width: 768px) {
-    .quiz-images {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .quiz-side {
-        width: 100%;
-        max-width: 350px;
-    }
-
-    .quiz-side img {
-        width: 100%;
-        height: auto;
-    }
-}
-/* Animation */
-@keyframes typing {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 100%;
-    }
-}
