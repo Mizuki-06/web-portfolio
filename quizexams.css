@@ -61,34 +61,29 @@ body {
     color: #193f70;
 }
 
-/* Quiz Section */
-#quizexamsection {
-    padding-top: 100px;
-}
-
+/* Quiz and Exam Cards */
 .cards {
-    width: 100%;
     display: flex;
     justify-content: center;
-    padding: 30px 20px;
+    padding: 30px;
 }
 
 .quizexamcard {
     width: 100%;
-    max-width: 900px;
+    max-width: 1000px;
+    padding: 25px;
+    border-radius: 15px;
     text-align: center;
 }
 
 .quizexamcard h3 {
+    margin-top: 20px;
+    margin-bottom: 30px;
     color: white;
     font-size: 30px;
-    margin-bottom: 30px;
-
-    animation: fadeDown 1s ease;
 }
 
 .quiz-images {
-    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -97,42 +92,32 @@ body {
 }
 
 .quiz-side {
-    width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    animation: slideUp 0.8s ease;
-}
-
-/* Delay the Back image only */
-.quiz-side:nth-child(2) {
-    animation-delay: 0.4s;
+    width: 250px;
 }
 
 .quiz-side h4 {
+    margin-bottom: 15px;
     color: white;
     font-size: 24px;
-    margin-bottom: 15px;
 }
 
 .quiz-side a {
     display: block;
-    width: 100%;
 }
 
-.quiz-side a img {
-    display: block;
-    width: 300px;
-    max-width: 100%;
-    height: auto;
+.quiz-side img {
+    width: 250px;
+    height: 400px;
+    object-fit: cover;
     border-radius: 10px;
     cursor: pointer;
-
     transition: transform 0.3s ease;
 }
 
-.quiz-side a img:hover {
+.quiz-side img:hover {
     transform: scale(1.03);
 }
 
@@ -189,8 +174,7 @@ body {
     transform: scale(1.03);
 }
 
-
-/* Animation */
+/* Responsive layout for quizzes and exams */
 @media (max-width: 650px) {
     .quiz-images,
     .exam-images {
@@ -199,6 +183,14 @@ body {
     }
 }
 
+@media (max-width: 650px) {
+    .quiz-images {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Animation */
 @keyframes typing {
     from {
         width: 0;
@@ -206,29 +198,5 @@ body {
 
     to {
         width: 100%;
-    }
-}
-
-@keyframes fadeDown {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
     }
 }
