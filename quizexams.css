@@ -117,6 +117,13 @@ body {
     transition: transform 0.3s ease;
 }
 
+/* Midterm Exam Image */
+.exam-side img {
+    width: 250px;
+    height: auto;
+    object-fit: contain;
+}
+
 .quiz-side img:hover {
     transform: scale(1.03);
 }
