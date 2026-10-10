@@ -143,6 +143,13 @@ body {
     object-fit: contain;
 }
 
+#quizexamsection .examcard .exam-side img {
+    width: 200px !important;
+    height: auto !important;
+    max-width: 200px !important;
+    object-fit: contain !important;
+}
+
 @media (max-width: 650px) {
     .quiz-images {
         flex-direction: column;
