@@ -136,7 +136,69 @@ body {
     transform: scale(1.03);
 }
 
+/* Exam Card */
+.examcard {
+    width: 100%;
+    max-width: 1000px;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.examcard h3 {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: white;
+    font-size: 30px;
+}
+
+.exam-images {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.exam-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+}
+
+.exam-side h4 {
+    margin-bottom: 15px;
+    color: white;
+    font-size: 24px;
+}
+
+.exam-side a {
+    display: block;
+}
+
+.exam-side img {
+    width: 250px;
+    height: 400px;
+    object-fit: contain;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.exam-side img:hover {
+    transform: scale(1.03);
+}
+
+
 /* Animation */
+@media (max-width: 650px) {
+    .quiz-images,
+    .exam-images {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 @keyframes typing {
     from {
         width: 0;
