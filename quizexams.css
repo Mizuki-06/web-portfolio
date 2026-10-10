@@ -121,7 +121,23 @@ body {
     transform: scale(1.03);
 }
 
-/* Exam Card */
+#quizexamsection .examcard .exam-side {
+    width: 250px !important;
+    max-width: 250px !important;
+}
+
+#quizexamsection .examcard .exam-side a {
+    width: 100% !important;
+}
+
+#quizexamsection .examcard .exam-side img {
+    display: block !important;
+    width: 250px !important;
+    max-width: 250px !important;
+    height: auto !important;
+    object-fit: contain !important;
+}
+
 .examcard {
     width: 100%;
     max-width: 1000px;
