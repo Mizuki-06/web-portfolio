@@ -25,6 +25,7 @@ body {
     background: rgba(4, 32, 215, 0.8);
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 15px;
     z-index: 1000;
     animation: typing 2s;
@@ -61,11 +62,18 @@ body {
     color: #193f70;
 }
 
-/* Quiz and Exam Cards */
+#quizexamsection {
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 40px;
+}
+
 .cards {
     display: flex;
     justify-content: center;
-    padding: 30px;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
 .quizexamcard {
@@ -86,16 +94,20 @@ body {
 .quiz-images {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
     gap: 30px;
+    width: 100%;
 }
 
+/* Quiz 1 images */
 .quiz-side {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 250px;
+    flex-shrink: 0;
 }
 
 .quiz-side h4 {
@@ -109,6 +121,7 @@ body {
 }
 
 .quiz-side img {
+    display: block;
     width: 250px;
     height: 400px;
     object-fit: cover;
@@ -117,37 +130,24 @@ body {
     transition: transform 0.3s ease;
 }
 
-/* Midterm Exam Image */
-.exam-side img {
-    width: 250px;
-    height: auto;
-    object-fit: contain;
-}
-
-.quiz-side img:hover {
+.quiz-side img:hover,
+.exam-side img:hover {
     transform: scale(1.03);
 }
 
+/* Quiz 2, Quiz 3, Long Quiz, and Midterm Exam images */
 .exam-side {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 250px;
-}
-
-.exam-side img {
-    display: block;
-    width: 250px;
+    width: 200px;
     max-width: 100%;
-    height: auto;
-    object-fit: contain;
+    flex-shrink: 0;
 }
 
-#quizexamsection .examcard .exam-side img {
-    width: 200px !important;
-    height: auto !important;
-    max-width: 200px !important;
-    object-fit: contain !important;
+.exam-side a {
+    display: block;
+    width: 100%;
 }
 
 .exam-side img {
@@ -157,16 +157,45 @@ body {
     height: auto;
     object-fit: contain;
     border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 @media (max-width: 650px) {
+    .navbar {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .nav-links li {
+        margin: 0 5px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
     .quiz-images {
         flex-direction: column;
         align-items: center;
     }
+
+    .quiz-side,
+    .exam-side {
+        max-width: 100%;
+    }
+
+    .quizexamcard h3 {
+        font-size: 26px;
+    }
 }
 
-/* Animation */
+/* Navbar Animation */
 @keyframes typing {
     from {
         width: 0;
